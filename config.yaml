@@ -4,20 +4,20 @@
 
 # 监控的航线列表（可配置多条）
 routes:
-  - from: SZX
-    from_name: 深圳
-    to: KMG
-    to_name: 昆明
+  - from: CAN
+    from_name: 广州
+    to: NKG
+    to_name: 南京
     dates:
-      - "2026-09-25"
+      - "2026-11-25"
     alert_threshold: 500        # 低于此价触发提醒（元，0 表示不启用）
 
-  - from: KMG
-    from_name: 昆明
-    to: SZX
-    to_name: 深圳
+  - from: CAN
+    from_name: 广州
+    to: NKG
+    to_name: 南京
     dates:
-      - "2026-10-07"
+      - "2026-11-29"
     alert_threshold: 1000
 
 # 监控的平台（可选: ctrip, fliggy, tongcheng, qunar, tuniu）
