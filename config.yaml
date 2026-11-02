@@ -22,8 +22,9 @@ routes:
 
 # 监控的平台（可选: ctrip, fliggy, tongcheng, qunar, tuniu）
 # fliggy(飞猪) 与 tuniu(途牛) 为纯 httpx 逆向实现，无需浏览器
+# ⚠️ 重点修改：qunar在GitHub Actions极易被反爬，换成 fliggy 更稳
 platforms:
-  - qunar
+  - fliggy
 
 # 调度配置
 schedule:
@@ -33,7 +34,7 @@ schedule:
 
 # 爬虫配置
 crawler:
-  headless: false              # 无头模式；首次跑建议 false 以便观察反爬
+  headless: true              # GitHub Actions 必须改成 true，false 会报错（没有图形浏览器）
   timeout_seconds: 45
   delay_min: 5                 # 单次请求间随机等待（秒）
   delay_max: 15
